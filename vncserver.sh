@@ -4,6 +4,8 @@ apt-get update
 
 apt-get install -y --no-install-recommends ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal firefox vnc4server
 
+mkdir /home/cisco/.vnc/
+
 # Setup daemon.
 cat > /home/cisco/.vnc/xstartup <<EOF
 #!/bin/sh
