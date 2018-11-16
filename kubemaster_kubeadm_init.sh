@@ -6,9 +6,6 @@ kubeadm init --apiserver-advertise-address=10.0.0.2 --pod-network-cidr=10.244.0.
 # Add env variable
 export KUBECONFIG=/etc/kubernetes/admin.conf
 
-# Exit root
-exit
-
 # Copy the admin.conf file into $HOME/.kube/config
   mkdir -p $HOME/.kube
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
