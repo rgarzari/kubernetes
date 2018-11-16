@@ -54,3 +54,8 @@ apt-get update
 # Used for flannel to pass bridged IPv4 traffic to iptables’ chains
 sysctl net.bridge.bridge-nf-call-iptables=1
 
+#!/bin/sh
+
+# Verify connectivity to gcr.io registries
+kubeadm config images pull
+
