@@ -60,7 +60,7 @@ sysctl net.bridge.bridge-nf-call-iptables=1
 kubeadm config images pull
 
 # Initialize the master
-kubeadm init --apiserver-advertise-address=10.0.0.2 --pod-network-cidr=10.244.0.0/16
+kubeadm init --apiserver-advertise-address=10.0.0.2 --pod-network-cidr=10.244.0.0/16 --kubernetes-version stable-1.12
 
 # Add env variable
 export KUBECONFIG=/etc/kubernetes/admin.conf
