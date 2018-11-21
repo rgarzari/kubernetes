@@ -58,4 +58,5 @@ sysctl net.bridge.bridge-nf-call-iptables=1
 cp /etc/skel/.bashrc ~/
 
 # Disable terminal timeout, similar to exec-timeout 0 0 on Cisco IOS
-echo "TMOUT=0" >> ~/.bashrc
+echo "export TMOUT=0" >> ~/.bashrc
+echo "export TERM=xterm-256color" >> ~/.bashrc
