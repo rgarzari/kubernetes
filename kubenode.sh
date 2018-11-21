@@ -53,3 +53,6 @@ apt-get update
 
 # Used for flannel to pass bridged IPv4 traffic to iptables’ chains
 sysctl net.bridge.bridge-nf-call-iptables=1
+
+# Replace the .bashrc file with the original one, the new one jumbles things up
+cp /etc/skel/.bashrc ~/
