@@ -56,3 +56,6 @@ sysctl net.bridge.bridge-nf-call-iptables=1
 
 # Replace the .bashrc file with the original one, the new one jumbles things up
 cp /etc/skel/.bashrc ~/
+
+# Disable terminal timeout, similar to exec-timeout 0 0 on Cisco IOS
+echo "TMOUT=0" >> ~/.bashrc
