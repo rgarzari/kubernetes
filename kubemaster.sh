@@ -76,3 +76,6 @@ sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/bc79dd150
 
 # Replace the .bashrc file with the original one, the new one jumbles things up
 cp /etc/skel/.bashrc ~/
+
+# Disable the terminal timeout, similar to exec-timeout 0 0 in Cisco IOS
+echo "TMOUT=0" >> ~/.bashrc
