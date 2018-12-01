@@ -72,7 +72,8 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 # Install flannel - Might comment this one out for the lab so that the students
 # know how flannel is installed
-sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml
+# sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml
+sudo kubectl apply -f https://raw.githubusercontent.com/rgarzari/kubernetes/master/kube-flannel.yml
 
 # Replace the .bashrc file with the original one, the new one jumbles things up
 cp /etc/skel/.bashrc ~/
