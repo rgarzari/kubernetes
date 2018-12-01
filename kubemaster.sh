@@ -57,10 +57,10 @@ apt-get update
 sysctl net.bridge.bridge-nf-call-iptables=1
 
 # Verify connectivity to gcr.io registries
-# kubeadm config images pull --kubernetes-version stable-1.12.2-00
+kubeadm config images pull --kubernetes-version=v1.12.2-00
 
 # Initialize the master
-kubeadm init --apiserver-advertise-address=10.0.0.2 --pod-network-cidr=10.244.0.0/16  --kubernetes-version stable-1.12.2-00
+kubeadm init --apiserver-advertise-address=10.0.0.2 --pod-network-cidr=10.244.0.0/16  --kubernetes-version=v1.12.2-00
 
 # Add env variable
 export KUBECONFIG=/etc/kubernetes/admin.conf
