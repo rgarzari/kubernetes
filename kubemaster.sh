@@ -68,7 +68,6 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 # Copy the admin.conf file into $HOME/.kube/config
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 # Install flannel - Might comment this one out for the lab so that the students
 # know how flannel is installed
@@ -77,6 +76,9 @@ sudo kubectl apply -f https://raw.githubusercontent.com/rgarzari/kubernetes/mast
 
 # Replace the .bashrc file with the original one, the new one jumbles things up
 cp /etc/skel/.bashrc ~/
+
+# Change permission for .kube/config file for any non-sudo user to use kubectl, otherwise, kubectl commands need to be executed with sudo 
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 # Disable terminal timeout, similar to exec-timeout 0 0 on Cisco IOS
 echo "export TMOUT=0" >> ~/.bashrc
