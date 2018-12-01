@@ -48,7 +48,7 @@ cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
 deb https://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 apt-get update
-apt-get install -y kubelet kubeadm kubectl
+apt-get install -y kubelet=1.12.0-00 kubeadm=1.12.0-00 kubectl=1.12.0-00
 apt-mark hold kubelet kubeadm kubectl
 
 apt-get update
@@ -60,7 +60,7 @@ sysctl net.bridge.bridge-nf-call-iptables=1
 kubeadm config images pull
 
 # Initialize the master
-kubeadm init --apiserver-advertise-address=10.0.0.2 --pod-network-cidr=10.244.0.0/16  --kubernetes-version stable-1.11
+kubeadm init --apiserver-advertise-address=10.0.0.2 --pod-network-cidr=10.244.0.0/16  --kubernetes-version stable-1.12.0-00
 
 # Add env variable
 export KUBECONFIG=/etc/kubernetes/admin.conf
