@@ -82,3 +82,5 @@ cp /etc/skel/.bashrc ~/
 # Disable terminal timeout, similar to exec-timeout 0 0 on Cisco IOS
 echo "export TMOUT=0" >> ~/.bashrc
 echo "export TERM=xterm-256color" >> ~/.bashrc
+export TMOUT=0
+export TERM=xterm-256color
