@@ -9,7 +9,7 @@
 # or install Docker CE 18.06 from Docker's repositories for Ubuntu or Debian:
 
 ## Install prerequisites.
-apt-get update && apt-get install -y apt-transport-https ca-certificates curl software-properties-common jq conntrack
+apt-get update && apt-get install -y apt-transport-https ca-certificates curl software-properties-common jq conntrack zsh
 
 ## Download GPG key.
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
@@ -42,7 +42,7 @@ systemctl daemon-reload
 systemctl restart docker
 
 
-apt-get update && apt-get install -y apt-transport-https curl
+# apt-get update && apt-get install -y apt-transport-https curl
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
 deb https://apt.kubernetes.io/ kubernetes-xenial main
@@ -80,7 +80,15 @@ sudo kubectl apply -f https://raw.githubusercontent.com/rgarzari/kubernetes/mast
 cp /etc/skel/.bashrc ~/
 
 # Disable terminal timeout, similar to exec-timeout 0 0 on Cisco IOS
-echo "export TMOUT=0" >> ~/.bashrc
-echo "export TERM=xterm-256color" >> ~/.bashrc
-export TMOUT=0
-export TERM=xterm-256color
+#echo "export TMOUT=0" >> ~/.bashrc
+#echo "export TERM=xterm-256color" >> ~/.bashrc
+#export TMOUT=0
+#export TERM=xterm-256color
+
+# Create .zshrc file for zsh
+touch ~/.zshrc
+echo "export TERM=linux" >> ~/.zshrc
+# Make zsh the default shell for cisco user
+chsh -s $(which zsh) cisco
+zsh
+export TERM=linux
