@@ -89,6 +89,9 @@ cp /etc/skel/.bashrc ~/
 touch ~/.zshrc
 echo "export TERM=linux" >> ~/.zshrc
 echo "alias ls='ls --color=auto'" >> ~/.zshrc
+echo "alias grep='grep --color=auto'" >> ~/.zshrc
+echo "alias egrep='egrep --color=auto'" >> ~/.zshrc
+
 sudo chown $(id -u cisco):$(id -g cisco) $HOME/.zshrc
 # Make zsh the default shell for cisco user
 chsh -s $(which zsh) cisco
