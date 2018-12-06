@@ -69,6 +69,9 @@ echo "export TERM=linux" >> ~/.zshrc
 echo "alias ls='ls --color=auto'" >> ~/.zshrc
 echo "alias grep='grep --color=auto'" >> ~/.zshrc
 echo "alias egrep='egrep --color=auto'" >> ~/.zshrc
+# Following two lines should be the last one in the .zshrc file
+echo "# zsh-syntax-highlighting should be at the end of this file" >> ~/.zshrc
+echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 
 sudo chown $(id -u cisco):$(id -g cisco) $HOME/.zshrc
 # Make zsh the default shell for cisco user
