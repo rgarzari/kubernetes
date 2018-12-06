@@ -7,7 +7,7 @@
 # or install Docker CE 18.06 from Docker's repositories for Ubuntu or Debian:
 
 ## Install prerequisites.
-apt-get update && apt-get install -y apt-transport-https ca-certificates curl software-properties-common jq conntrack
+apt-get update && apt-get install -y apt-transport-https ca-certificates curl software-properties-common jq conntrack zsh
 
 ## Download GPG key.
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
