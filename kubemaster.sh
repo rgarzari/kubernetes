@@ -86,15 +86,6 @@ cp /etc/skel/.bashrc ~/
 #export TERM=xterm-256color
 
 # Create .zshrc file for zsh
-#touch ~/.zshrc
-#echo "export TERM=linux" >> ~/.zshrc
-#echo "alias ls='ls --color=auto'" >> ~/.zshrc
-#echo "alias grep='grep --color=auto'" >> ~/.zshrc
-#echo "alias egrep='egrep --color=auto'" >> ~/.zshrc
-# The following two lines should be the last one in the .zshrc file
-#echo "# zsh-syntax-highlighting should be at the end of this file" >> ~/.zshrc
-#echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
-
 cat <<EOF >~/.zshrc
 export TERM=linux
 alias ls='ls --color=auto'
@@ -107,7 +98,6 @@ fi
 # zsh-syntax-highlighting should be at the end of this file
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 EOF
-
 
 sudo chown $(id -u cisco):$(id -g cisco) $HOME/.zshrc
 # Make zsh the default shell for cisco user
