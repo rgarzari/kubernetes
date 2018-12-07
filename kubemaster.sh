@@ -94,7 +94,8 @@ alias egrep='egrep --color=auto'
 if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh)
 fi
-PROMPT='%F{cyan}%n%f@%F{cyan}%m%f %F{red}%1~%f %# '
+# PROMPT='%F{cyan}%n%f@%F{cyan}%m%f %F{red}%1~%f %# '
+PROMPT='%F{cyan}%m%f %F{red}%1~%f %# '
 # The following two lines should be the last one in the .zshrc file
 # zsh-syntax-highlighting should be at the end of this file
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
