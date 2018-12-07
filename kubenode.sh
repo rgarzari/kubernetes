@@ -85,7 +85,7 @@ PROMPT='%F{012}%m%f %F{red}%1~%f %# '
 # zsh-syntax-highlighting should be at the end of this file
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 EOF
-
+touch ~/.zhistory
 sudo chown $(id -u cisco):$(id -g cisco) $HOME/.zshrc
 sudo chown $(id -u cisco):$(id -g cisco) $HOME/.zhistory
 # Make zsh the default shell for cisco user
