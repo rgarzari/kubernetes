@@ -88,6 +88,12 @@ cp /etc/skel/.bashrc ~/
 # Create .zshrc file for zsh
 cat <<EOF >~/.zshrc
 export TERM=xterm-256color
+export HISTSIZE=1000
+export HISTFILESIZE=1000
+export HISTFILE=~/.zhistory
+setopt HIST_FIND_NO_DUPS
+setopt inc_append_history
+setopt share_history
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -100,8 +106,9 @@ PROMPT='%F{012}%m%f %F{red}%1~%f %# '
 # zsh-syntax-highlighting should be at the end of this file
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 EOF
-
+touch ~/.zhistory
 sudo chown $(id -u cisco):$(id -g cisco) $HOME/.zshrc
+sudo chown $(id -u cisco):$(id -g cisco) $HOME/.zhistory
 # Make zsh the default shell for cisco user
 chsh -s $(which zsh) cisco
 zsh
