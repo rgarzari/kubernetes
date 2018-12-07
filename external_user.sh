@@ -3,7 +3,7 @@ apt-get update && apt-get install -y apt-transport-https ca-certificates curl so
 
 # Create .zshrc file for zsh
 cat <<EOF >~/.zshrc
-export TERM=linux
+export TERM=xterm-256color
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -18,5 +18,5 @@ sudo chown $(id -u cisco):$(id -g cisco) $HOME/.zshrc
 # Make zsh the default shell for cisco user
 chsh -s $(which zsh) cisco
 zsh
-export TERM=linux
+export TERM=xterm-256color
 
