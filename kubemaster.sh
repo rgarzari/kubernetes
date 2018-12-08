@@ -88,12 +88,18 @@ cp /etc/skel/.bashrc ~/
 # Create .zshrc file for zsh
 cat <<EOF >~/.zshrc
 export TERM=xterm-256color
+export GREP_COLOR='0;34'
 export HISTSIZE=1000
 export HISTFILESIZE=1000
-export HISTFILE=~/.zhistory
+export HISTFILE="~/.zhistory"
 setopt HIST_FIND_NO_DUPS
 setopt inc_append_history
 setopt share_history
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=green'
+ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=green'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=green'
+ZSH_HIGHLIGHT_STYLES[path]='fg=green'
+ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=green'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
