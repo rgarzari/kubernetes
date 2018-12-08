@@ -98,7 +98,7 @@ setopt share_history
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
-if [ $commands[kubectl] ]; then
+if [ /usr/bin/kubectl ]; then
   source <(kubectl completion zsh)
 fi
 # PROMPT='%F{cyan}%n%f@%F{cyan}%m%f %F{red}%1~%f %# '
