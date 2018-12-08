@@ -95,11 +95,6 @@ export HISTFILE="~/.zhistory"
 setopt HIST_FIND_NO_DUPS
 setopt inc_append_history
 setopt share_history
-ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=green'
-ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=green'
-ZSH_HIGHLIGHT_STYLES[precommand]='fg=green'
-ZSH_HIGHLIGHT_STYLES[path]='fg=green'
-ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=green'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -108,6 +103,13 @@ if [ $commands[kubectl] ]; then
 fi
 # PROMPT='%F{cyan}%n%f@%F{cyan}%m%f %F{red}%1~%f %# '
 PROMPT='%F{012}%m%f %F{red}%1~%f %# '
+
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=green'
+ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=green'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=green'
+ZSH_HIGHLIGHT_STYLES[path]='fg=green'
+ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=green'
+
 # The following two lines should be the last one in the .zshrc file
 # zsh-syntax-highlighting should be at the end of this file
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
