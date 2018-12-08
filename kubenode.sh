@@ -66,6 +66,7 @@ cp /etc/skel/.bashrc ~/
 # Create .zshrc file for zsh
 cat <<EOF >~/.zshrc
 export TERM=xterm-256color
+export GREP_COLOR='0;34'
 export HISTSIZE=1000
 export HISTFILESIZE=1000
 export HISTFILE=~/.zhistory
