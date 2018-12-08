@@ -104,11 +104,11 @@ fi
 # PROMPT='%F{cyan}%n%f@%F{cyan}%m%f %F{red}%1~%f %# '
 PROMPT='%F{012}%m%f %F{red}%1~%f %# '
 
-ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=green'
-ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=green'
-ZSH_HIGHLIGHT_STYLES[precommand]='fg=green'
-ZSH_HIGHLIGHT_STYLES[path]='fg=green'
-ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=green'
+#ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=green'
+#ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=green'
+#ZSH_HIGHLIGHT_STYLES[precommand]='fg=green'
+#ZSH_HIGHLIGHT_STYLES[path]='fg=green'
+#ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=green'
 
 # The following two lines should be the last one in the .zshrc file
 # zsh-syntax-highlighting should be at the end of this file
