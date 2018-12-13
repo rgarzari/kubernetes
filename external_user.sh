@@ -34,6 +34,6 @@ sudo chown $(id -u cisco):$(id -g cisco) $HOME/.zshrc
 sudo chown $(id -u cisco):$(id -g cisco) $HOME/.zhistory
 # Make zsh the default shell for cisco user
 chsh -s $(which zsh) cisco
-zsh
+sudo -u cisco zsh
 export TERM=xterm-256color
 
