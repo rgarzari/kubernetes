@@ -98,6 +98,7 @@ setopt share_history
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
+alias cat='highlight -O ansi --force'
 if [ /usr/bin/kubectl ]; then
   source <(kubectl completion zsh)
 fi
