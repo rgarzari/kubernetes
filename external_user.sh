@@ -1,5 +1,5 @@
 ## Install prerequisites.
-apt-get update && apt-get install -y apt-transport-https ca-certificates curl software-properties-common zsh zsh-syntax-highlighting highlight
+apt-get update && apt-get install -y apt-transport-https ca-certificates curl software-properties-common zsh zsh-syntax-highlighting
 
 # Create .zshrc file for zsh
 cat <<EOF >~/.zshrc
@@ -14,7 +14,6 @@ setopt share_history
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
-alias cat='highlight -O ansi --force'
 # kubectl not needed for workers/minions
 #if [ /usr/bin/kubectl ]; then
 #  source <(kubectl completion zsh)
