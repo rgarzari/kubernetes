@@ -75,7 +75,7 @@ sudo chown $(id -u cisco):$(id -g cisco) $HOME/.kube/config
 # know how flannel is installed
 # sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml
 sudo kubectl apply -f https://raw.githubusercontent.com/rgarzari/kubernetes/master/kube-flannel.yml
-sudo kubectl apply -f https://docs.projectcalico.org/v3.4/getting-started/kubernetes/installation/hosted/canal/canal.yaml
+#sudo kubectl apply -f https://docs.projectcalico.org/v3.4/getting-started/kubernetes/installation/hosted/canal/canal.yaml
 
 # Replace the .bashrc file with the original one, the new one jumbles things up
 # cp /etc/skel/.bashrc ~/
