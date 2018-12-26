@@ -1,5 +1,5 @@
 ## Install prerequisites.
-apt-get update && apt-get install -y apt-transport-https ca-certificates curl software-properties-common zsh zsh-syntax-highlighting
+apt-get update && apt-get install -y apt-transport-https ca-certificates curl software-properties-common zsh zsh-syntax-highlighting conntrack
 
 # Create .zshrc file for zsh
 cat <<EOF >~/.zshrc
