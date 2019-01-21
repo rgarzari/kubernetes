@@ -56,6 +56,13 @@ apt-get update
 # Used for flannel to pass bridged IPv4 traffic to iptables’ chains
 sysctl net.bridge.bridge-nf-call-iptables=1
 
+# Get YAML files for lab
+wget https://raw.githubusercontent.com/rgarzari/kubernetes/master/busybox-deployment.yml
+wget https://raw.githubusercontent.com/rgarzari/kubernetes/master/busybox-nodeport-service.yml
+wget https://raw.githubusercontent.com/rgarzari/kubernetes/master/webapp-1-clusterip-service.yml
+wget https://raw.githubusercontent.com/rgarzari/kubernetes/master/webapp-1-deployment.yml
+wget https://raw.githubusercontent.com/rgarzari/kubernetes/master/webapp-1-nodeport-service.yml
+
 # Verify connectivity to gcr.io registries
 kubeadm config images pull --kubernetes-version=v1.12.2
 
