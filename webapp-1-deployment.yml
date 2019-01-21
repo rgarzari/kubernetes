@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-1-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: webapp-1-label
+  template:
+    metadata:
+      labels:
+        app: webapp-1-label
+    spec:
+      containers:
+      - name: webapp-1-container
+        image: rgarzari/climagine
+        ports:
+        - containerPort: 8080
+      terminationGracePeriodSeconds: 0
