@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: busybox-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: busybox-label
+  template:
+    metadata:
+      labels:
+        app: busybox-label
+    spec:
+      containers:
+      - name: busybox-container
+        image: busybox
+        args:
+        - sleep
+        - "1000000"
+      terminationGracePeriodSeconds: 0
+      nodeSelector:
+        kubernetes.io/hostname: kubenode-1
