@@ -207,7 +207,7 @@ spec:
     spec:
       serviceAccountName: nginx-ingress-serviceaccount
       nodeSelector:
-          kubernetes.io/hostname: kubenode-2
+          kubernetes.io/hostname: kubenode-1
       containers:
         - name: nginx-ingress-controller
           image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.21.0
