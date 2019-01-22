@@ -84,6 +84,9 @@ sudo chown $(id -u cisco):$(id -g cisco) $HOME/.kube/config
 sudo kubectl apply -f https://raw.githubusercontent.com/rgarzari/kubernetes/master/kube-flannel.yml
 #sudo kubectl apply -f https://docs.projectcalico.org/v3.4/getting-started/kubernetes/installation/hosted/canal/canal.yaml
 
+# Secret for images
+kubectl create secret docker-registry regcred --docker-server=https://index.docker.io/v1/ --docker-username=axmohammed --docker-password=Ciscolive2019 --docker-email=axmohammed@gmail.com
+
 # Replace the .bashrc file with the original one, the new one jumbles things up
 # cp /etc/skel/.bashrc ~/
 
