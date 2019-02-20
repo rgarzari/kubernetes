@@ -7,7 +7,7 @@
 # or install Docker CE 18.06 from Docker's repositories for Ubuntu or Debian:
 
 ## Install prerequisites.
-apt-get update && apt-get install -y apt-transport-https ca-certificates curl software-properties-common jq conntrack zsh zsh-syntax-highlighting bridge-utils
+apt-get update && apt-get install -y apt-transport-https ca-certificates curl software-properties-common jq conntrack zsh zsh-syntax-highlighting bridge-utils nodejs npm
 
 ## Download GPG key.
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
@@ -38,6 +38,9 @@ mkdir -p /etc/systemd/system/docker.service.d
 # Restart docker.
 systemctl daemon-reload
 systemctl restart docker
+
+# Allow docker commands without using sudo
+sudo usermod -aG docker $USER
 
 apt-get update
 
